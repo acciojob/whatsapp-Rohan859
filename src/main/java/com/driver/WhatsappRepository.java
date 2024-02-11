@@ -75,7 +75,7 @@ public class WhatsappRepository {
 
         for(User user:userList)
         {
-            if(user==sender)
+            if(user.equals(sender))
             {
                 isPresent=true;
                 break;
