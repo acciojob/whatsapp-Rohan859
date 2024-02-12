@@ -154,7 +154,7 @@ public class WhatsappRepository {
             groupMessageMap.put(group,new ArrayList<>());
 
             //this.customGroupCount++;
-            
+
             return group;
         }
 
@@ -181,7 +181,7 @@ public class WhatsappRepository {
         this.userMobile = new HashSet<>();
         this.users=new HashSet<>();
         this.messages=new ArrayList<>();
-        this.customGroupCount = 0;
+      //  this.customGroupCount = 0;
         this.messageId = 0;
     }
 
@@ -226,12 +226,12 @@ public class WhatsappRepository {
     }
 
     public int getCustomGroupCount() {
-        return customGroupCount;
+        return Group.count;
     }
 
-    public void setCustomGroupCount(int customGroupCount) {
-        this.customGroupCount = customGroupCount;
-    }
+//    //public void setCustomGroupCount(int customGroupCount) {
+//        this.customGroupCount = customGroupCount;
+//    }
 
     public int getMessageId() {
         return messageId;
