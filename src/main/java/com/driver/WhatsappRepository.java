@@ -226,7 +226,7 @@ public class WhatsappRepository {
     }
 
     public int getCustomGroupCount() {
-        return Group.count;
+        return groupUserMap.size();
     }
 
 //    //public void setCustomGroupCount(int customGroupCount) {
