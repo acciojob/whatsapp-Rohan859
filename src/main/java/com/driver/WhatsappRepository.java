@@ -65,7 +65,7 @@ public class WhatsappRepository {
         //Throw "You are not allowed to send message" if the sender is not a member of the group
         //If the message is sent successfully, return the final number of messages in that group.
 
-       if(!groupUserMap.containsKey(group)) //if group does not exist
+       if(!groupUserMap.containsKey(group) || group==null) //if group does not exist
        {
            throw new Exception("Group does not exist");
        }
@@ -75,7 +75,7 @@ public class WhatsappRepository {
 
         for(User user:userList)
         {
-            if(user.equals(sender))
+            if(user==sender)
             {
                 isPresent=true;
                 break;

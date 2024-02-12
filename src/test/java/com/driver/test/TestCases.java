@@ -45,5 +45,10 @@ public class TestCases
         assertEquals(user.getName(),"Rohan");
     }
 
+    public void testSendMessage() throws Exception
+    {
+
+    }
+
 
 }
