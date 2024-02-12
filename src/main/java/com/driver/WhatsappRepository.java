@@ -65,7 +65,7 @@ public class WhatsappRepository {
         //Throw "You are not allowed to send message" if the sender is not a member of the group
         //If the message is sent successfully, return the final number of messages in that group.
 
-       if(!groupUserMap.containsKey(group) || group==null) //if group does not exist
+       if(!groupUserMap.containsKey(group)) //if group does not exist
        {
            throw new Exception("Group does not exist");
        }
@@ -133,7 +133,12 @@ public class WhatsappRepository {
             //it is personal chat
 
             groupName=users.get(1).getName();
-            return new Group(groupName,2);
+
+            Group g= new Group(groupName,2);
+            groupMessageMap.put(g,new ArrayList<>());
+            adminMap.put(g,admin);
+            groupUserMap.put(g,new ArrayList<>());
+            return g;
         }
         else //if 2+ users then group name will be "Group count"
         {
@@ -146,6 +151,7 @@ public class WhatsappRepository {
             //add in groupUserMap
             groupUserMap.put(group,users);
             adminMap.put(group,admin);
+            groupMessageMap.put(group,new ArrayList<>());
 
             this.customGroupCount++;
             return group;

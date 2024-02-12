@@ -39,10 +39,9 @@ public class TestCases
     }
 
     @Test
-    public void testCreateUser() throws Exception
-    {
-        User user=new User("Rohan","123456");
-        assertEquals(user.getName(),"Rohan");
+    public void testCreateUser() throws Exception {
+        User user = new User("Rohan", "123456");
+        assertEquals(user.getName(), "Rohan");
     }
 
     public void testSendMessage() throws Exception
