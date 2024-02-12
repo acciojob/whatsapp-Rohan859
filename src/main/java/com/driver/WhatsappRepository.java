@@ -18,7 +18,7 @@ public class WhatsappRepository {
     private HashSet<User>users;
 
     private ArrayList<Message>messages;
-    private int customGroupCount;
+//    private int customGroupCount;
     private int messageId;
 
 
@@ -153,7 +153,8 @@ public class WhatsappRepository {
             adminMap.put(group,admin);
             groupMessageMap.put(group,new ArrayList<>());
 
-            this.customGroupCount++;
+            //this.customGroupCount++;
+            
             return group;
         }
 
